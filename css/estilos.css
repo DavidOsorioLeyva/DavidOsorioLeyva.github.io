@@ -83,10 +83,10 @@ main {
 }
 .portafolio {
     width: inherit;
-    height: 940px;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 120px 820px;
+    grid-template-rows: 120px 1fr;
     /* background: #e2e2e2; */
 }
 .portafolio-title {
@@ -103,11 +103,11 @@ main {
 }
 .portafolio-container {
     width: 75%;
-    height: 820px;
+    height: auto;
     justify-self: center;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 400px 400px;
+    grid-template-rows: 1fr 1fr;
     gap: 20px;
 }
 .project-container {
@@ -117,10 +117,18 @@ main {
     display: flex;
     overflow: hidden;
 }
-.project-container img {
-    height: 100%;
+.project-image-cont {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
 }
-.project-container div {
+.project-container img {
+    /* height: 100%; */
+    max-width: 100%;
+}
+.project-container .text-project {
+    width: 50%;
     padding: 20px;
 }
 .project-container h3 {
@@ -131,7 +139,7 @@ main {
 }
 .experiencia {
     width: inherit;
-    height: 500px;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100px 1fr;
@@ -304,9 +312,9 @@ footer {
         background: rgba(0, 0, 0, .8);
         top: 0;
         bottom: 0;
-        width: 30vw;
+        width: 50vw;
         height: 100vh;
-        left: -30vw;
+        left: -50vw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -316,7 +324,88 @@ footer {
     .menu-container.is-active {
         left: 0;
     }
+    .text-project p {
+        font-size: 0.9em;
+    }
 }
 @media screen and (max-width: 767px) {
-
+    .project-container {
+        display: block;
+    }
+    .project-image-cont {
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        padding-top: 2em;
+    }
+    .project-container .text-project {
+        width: auto;
+        padding: 20px;
+    }
+    .portafolio {
+        height: auto;
+    }
+    .experiencia .experiencia-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 10px;
+    }
+    .about {
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .about .photo-container {
+        margin: 0;
+        justify-self: center;
+    }
+    .about .bio-container h3 {
+        text-align: center;
+    }
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .contact1 {
+        justify-self: center;
+    }
+    .contact2 {
+        justify-self: center;
+        align-self: self-start;
+    }
+    .contact1 p {
+        margin: 0;
+    }
+    .contact2 .social-container {
+        margin: 0;
+    }
+    /* .contact2 small {
+        bottom: 10px;
+        right: 30%;
+    } */
+}
+@media screen and (max-width: 425px) {
+    .logo-container img {
+        margin: 0;
+        width: 250px;
+    }
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    .portafolio {
+        justify-items: center;
+    }
+    .experiencia {
+        justify-items: center;
+    }
+    .portafolio-title h2 {
+        margin: 0;
+        font-size: 1.3em;
+    }
+    .experiencia-title h2 {
+        margin: 0;
+        font-size: 1.3em;
+    }
 }

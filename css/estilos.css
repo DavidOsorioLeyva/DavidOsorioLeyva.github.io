@@ -112,6 +112,7 @@ main {
 }
 .project-container {
     border: 1px solid lightslategray;
+    background-color: white;
     border-radius: 10px;
     display: flex;
     overflow: hidden;
@@ -149,9 +150,33 @@ main {
 }
 .card-exp {
     border: 1px solid lightslategray;
+    background-color: lightsteelblue;
     border-radius: 10px;
-    width: 450px;
-    height: 350px;
+    overflow: hidden;
+    width: 70%;
+}
+.card-exp img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.info-card-cont {
+    margin: -60px 20px 20px 20px;
+    background-color: white;
+    position: relative;
+    text-align: center;
+    padding: 15px;
+    /* padding-bottom: 15px; */
+}
+.info-card-cont p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.card-exp a {
+    border: 1px solid lightslategrey;
+    padding: 5px 10px;
+    color: black;
+    border-radius: 5px;
 }
 .about {
     width: inherit;
@@ -213,6 +238,22 @@ footer {
     bottom: 10px;
     right: 10px;
 }
+.burger-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(0, 0, 0, .8);
+    background-image: url(https://i.ibb.co/sb2sNSh/menu-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    color: white;
+    z-index: 4;
+    display: none;
+}
 /*-----------------------*/
 @media screen and (max-width: 1023px) {
     .hero {
@@ -232,6 +273,49 @@ footer {
         z-index: 2;
     }
 }
+@media screen and (max-width: 916px) {
+    .burger-button {
+        display: block;
+    }
+    header {
+        grid-template-columns: 1fr;
+    }
+    .logo-container {
+        justify-self: center;
+    }
+    header ul {
+        display: initial;
+    }
+    header ul li {
+        height: 50px;
+        text-align: center;
+    }
+    .menu-container a {
+        justify-content: center;
+        height: 40px;
+        margin: 0;
+    }
+    .menu-container nav {
+        margin: 5em 0 0 0;
+    }
+    .menu-container {
+        position: fixed;
+        background: rgba(0, 0, 0, .8);
+        top: 0;
+        bottom: 0;
+        width: 30vw;
+        height: 100vh;
+        left: -30vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        transition: .3s;
+    }
+    .menu-container.is-active {
+        left: 0;
+    }
+}
 @media screen and (max-width: 767px) {
-    
+
 }

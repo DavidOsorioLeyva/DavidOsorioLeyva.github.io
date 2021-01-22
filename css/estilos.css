@@ -17,28 +17,33 @@ header {
     height: 120px;
     background: #353338;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(100px, 1fr) 1fr;
     align-items: center;
+    /* justify-items: end; */
 }
 .logo-container {
-    height: 80px;
+    height: 91px;
+    justify-self: start;
+}
+.menu-container {
+    justify-self: end;
 }
 header img {
     /* color: white; */
-    margin-left: 3em;
+    margin-left: 2em;
+}
+.menu-container nav {
+    margin-right: 2em;
 }
 header ul {
     display: flex;
     margin: 0;
     padding: 0;
-    /* padding-left: 2.5em; */
     align-items: center;
-    justify-content: center;
 }
 .menu-container, nav, ul {
     height: inherit;
 }
-
 .menu-container a {
     color: white;
     margin: 0 15px;

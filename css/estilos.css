@@ -125,10 +125,12 @@ main .projects-container article {
 main .projects-container .project {
     display: flex;
     align-items: center;
+    font-family: 'Rubik', sans-serif;
 }
 main .projects-container .project h3 {
     font-size: 2em;
     margin-bottom: 40px;
+    font-weight: 400;
 }
 main .projects-container .project p {
     margin-bottom: 40px;
@@ -160,6 +162,7 @@ main .projects-container .project-img-container img {
 }
 .practicas .practicas-title {
     text-align: center;
+    font-family: 'Rubik', sans-serif;
 }
 .practicas .practicas-container {
     width: auto;
@@ -265,6 +268,7 @@ main .projects-container .project-img-container img {
 #about .about-info-profile {
     width: 50%;
     margin-right: 25px;
+    font-family: 'Rubik', sans-serif;
 }
 #about .about-img-container {
     justify-self: self-start;

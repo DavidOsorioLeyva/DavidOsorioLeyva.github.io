@@ -1,3 +1,10 @@
+:root {
+    --dark: #0A1014;
+    --gray: #4F5D67;
+    --neon: #0AFFEF;
+    --dark-blue: #243441;
+    --soft-white: #F6F5F5;
+}
 * {
     margin: 0;
     padding: 0;
@@ -15,4 +22,48 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
+}
+/* --- --- --- HERO SECTION --- --- --- */
+.hero {
+    width: 100%;
+    min-height: 400px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--dark-blue);
+    color: var(--soft-white);
+}
+.hero__info {
+    text-align: center;
+}
+.hero__info > p {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+}
+.hero__info > h1 {
+    font-size: 3rem;
+    line-height: 3.2rem;
+    margin: 10px 0;
+}
+.hero__contact {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.hero__link {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 1px 1px 7px var(--dark), -1px -1px 7px var(--gray);
+    color: var(--neon);
+    font-size: 2.8rem;
+}
+.hero__link--arrow {
+    font-size: 2.4rem;
 }

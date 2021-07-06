@@ -1,0 +1,9 @@
+/* --- --- --- HERO SECTION --- --- --- */
+.hero__info > p {
+    font-size: 4.2rem;
+    line-height: 4.4rem;
+}
+.hero__info > h1 {
+    font-size: 5.4rem;
+    line-height: 5.6rem;
+}
